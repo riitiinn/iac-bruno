@@ -1,0 +1,20 @@
+meta {
+  name: list-projects
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{ url }}/v1/user/project
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.1.0
+}

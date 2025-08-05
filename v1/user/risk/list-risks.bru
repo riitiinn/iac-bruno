@@ -1,0 +1,15 @@
+meta {
+  name: list-risks
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{ url }}/v1/user/project/10/risks
+  body: none
+  auth: none
+}
+
+headers {
+  User-Agent: insomnia/11.2.0
+}

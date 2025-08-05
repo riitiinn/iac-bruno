@@ -1,0 +1,32 @@
+meta {
+  name: update value of change 
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{ url }}/v1/user/achievedOutcome/5/valueOfChange
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.1.0
+}
+
+body:json {
+  
+  		{
+    "totalOutcomeValue": 50000,
+    "outcomeAdjustment": 50,
+    "totalAdjustedValue": 25000,
+    "calculationMethod": "manual"
+  }
+  
+  
+}

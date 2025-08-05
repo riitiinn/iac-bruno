@@ -1,0 +1,27 @@
+meta {
+  name: create-department
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ url }}/v1/user/department
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.1.0
+}
+
+body:json {
+  {
+  	"name":"Department of beamlab",
+  	"organizationId":1
+  }
+}

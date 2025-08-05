@@ -1,0 +1,20 @@
+meta {
+  name: list-stakeholders
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{ url }}/v1/user/stakeholders
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.1.0
+}

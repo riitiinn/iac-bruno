@@ -1,0 +1,44 @@
+meta {
+  name: create-project-stakeholders-resources
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ url }}/v1/user/project/1/resources
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.1.0
+}
+
+body:json {
+  [
+    {
+      "projectStakeholderId": 1,
+      "activity": "Community engagement meeting",
+      "activityPeriod": "during-project",
+      "value": 5000,
+      "calculationMethod": "2",
+      "startDate": "2025-01-15",
+      "endDate": "2025-02-15"
+    },
+    {
+      "projectStakeholderId": 2,
+      "activity": "Stakeholder survey",
+      "activityPeriod": "",
+      "value": 2500,
+      "calculationMethod": "4",
+      "startDate": "2025-04-01",
+      "endDate": "2025-04-15"
+    }
+  ]
+  
+}

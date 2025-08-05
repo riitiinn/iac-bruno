@@ -1,0 +1,20 @@
+meta {
+  name: count-projects
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{ url }}/v1/user/project/count
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.1.0
+}

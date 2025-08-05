@@ -1,0 +1,47 @@
+meta {
+  name: create-project-ImplementationPlan
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ url }}/v1/user/project/1/implementations
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.1.0
+}
+
+body:json {
+  [
+    {
+      "activity": "Train community leaders",
+      "outcome": "Empowered local governance",
+      "importance": 100,
+      "startDate": "2025-07-01",
+      "endDate": "2025-08-01"
+    },
+    {
+      "activity": "Conduct awareness program",
+      "outcome": "Increased public participation",
+      "importance": 70,
+      "startDate": "2025-08-05",
+      "endDate": "2025-09-05"
+    },
+    {
+      "activity": "Evaluate past project impact",
+      "outcome": "Improved planning",
+      "importance": 90,
+      "startDate": "2025-09-10",
+      "endDate": "2025-10-10"
+    }
+  ]
+  
+}

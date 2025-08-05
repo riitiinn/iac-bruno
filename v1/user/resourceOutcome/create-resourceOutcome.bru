@@ -1,0 +1,24 @@
+meta {
+  name: create-resourceOutcome
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ url }}/v1/user/resource/1
+  body: multipartForm
+  auth: none
+}
+
+headers {
+  Content-Type: multipart/form-data
+  User-Agent: insomnia/11.2.0
+}
+
+body:multipart-form {
+  statusEn: in-progress
+  resource: 20.8
+  percentage: 30
+  fileUrl: 
+  fileUrl: 
+}

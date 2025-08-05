@@ -1,0 +1,47 @@
+meta {
+  name: create-project-stakeholders
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ url }}/v1/user/project/1/stakeholders
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.1.0
+}
+
+body:json {
+  [
+    {
+      "stakeholderId": 1,
+  		"agencyName":"Homeboy",
+      "targetNumber": 100,
+      "targetType": "person",
+      "note": "Lead individual involved in execution"
+    },
+    {
+      "stakeholderId": 2,
+  		"agencyName":"Magics",
+      "targetNumber": 200,
+      "targetType": "organization",
+      "note": "Partnering NGO"
+    },
+    {
+      "stakeholderId": 3,
+  		"agencyName":"Magic",
+      "targetNumber": 50,
+      "targetType": "community",
+      "note": " "
+    }
+  ]
+  
+}

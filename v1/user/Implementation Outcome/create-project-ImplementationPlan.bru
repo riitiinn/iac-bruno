@@ -1,0 +1,28 @@
+meta {
+  name: create-project-ImplementationPlan
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ url }}/v1/user/implementationOutcome/9
+  body: multipartForm
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: multipart/form-data
+  User-Agent: insomnia/11.1.0
+}
+
+body:multipart-form {
+  percentage: 10
+  statusEn: good going
+  result: going good
+  fileUrl: 
+  fileUrl: 
+}

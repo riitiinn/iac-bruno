@@ -1,0 +1,29 @@
+meta {
+  name: update-settings
+  type: http
+  seq: 1
+}
+
+patch {
+  url: {{ url }}/v1/user/settings
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.1.0
+}
+
+body:json {
+  
+   {
+      "tableRowsPerPage": 10
+  }
+  
+  
+}

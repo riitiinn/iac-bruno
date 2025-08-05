@@ -1,0 +1,33 @@
+meta {
+  name: create-project
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ url }}/v1/user/project
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.1.0
+}
+
+body:json {
+  {
+  	"departmentId":1,
+    "name": "Kam ",
+    "type": "others",
+  	"specify":"kamchors",
+    "establishYear": 2001,
+    "startDate": "2025-05-29",
+    "endDate": "2025-05-31"
+  }
+  
+}

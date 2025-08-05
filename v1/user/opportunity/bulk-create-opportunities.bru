@@ -1,0 +1,38 @@
+meta {
+  name: bulk-create-opportunities
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ url }}/v1/user/project/12/opportunities
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.2.0
+}
+
+body:json {
+  {
+    "opportunities": [
+      {
+        "note": "Example 1",
+        "level": "highest",
+        "managementApproach": "Plan A",
+        "plannedOpportunity": "Budget issue",
+        "actualOpportunity": "Minor delay"
+      },
+      {
+        "note": "Example 2",
+        "level": "lowest",
+        "managementApproach": "Plan B",
+        "plannedOpportunity": "None",
+        "actualOpportunity": "On track"
+      }
+    ]
+  }
+  
+}

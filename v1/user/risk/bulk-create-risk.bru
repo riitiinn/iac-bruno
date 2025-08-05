@@ -1,0 +1,38 @@
+meta {
+  name: bulk-create-risk
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ url }}/v1/user/project/12/risks
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.2.0
+}
+
+body:json {
+  {
+    "risks": [
+      {
+        "note": "Example 1",
+        "level": "medium",
+        "managementApproach": "Plan D",
+        "plannedRisk": "Budget issue",
+        "actualRisk": "Minor delay"
+      },
+      {
+        "note": "Example 2",
+        "level": "low",
+        "managementApproach": "Plan D",
+        "plannedRisk": "None",
+        "actualRisk": "On track"
+      }
+    ]
+  }
+  
+}

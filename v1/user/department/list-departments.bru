@@ -1,0 +1,20 @@
+meta {
+  name: list-departments
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{ url }}/v1/user/department
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/11.1.0
+}
