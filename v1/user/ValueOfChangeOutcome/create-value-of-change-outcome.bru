@@ -5,14 +5,18 @@ meta {
 }
 
 post {
-  url: {{ url }}/v1/user/valueOfChangeOutcome/9
+  url: {{url}}/v1/user/valueOfChangeOutcome/1
   body: multipartForm
-  auth: none
+  auth: bearer
 }
 
 headers {
   Content-Type: multipart/form-data
   User-Agent: insomnia/11.2.0
+}
+
+auth:bearer {
+  token: {{user_token}}
 }
 
 body:multipart-form {

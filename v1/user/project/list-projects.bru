@@ -5,16 +5,16 @@ meta {
 }
 
 get {
-  url: {{ url }}/v1/user/project
+  url: {{url}}/v1/user/project
   body: json
-  auth: none
-}
-
-params:query {
-  : 
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
   User-Agent: insomnia/11.1.0
+}
+
+auth:bearer {
+  token: {{user_token}}
 }

@@ -1,17 +1,13 @@
 meta {
-  name: update value of change 
+  name: update value of change
   type: http
   seq: 3
 }
 
 patch {
-  url: {{ url }}/v1/user/achievedOutcome/5/valueOfChange
+  url: {{url}}/v1/user/achievedOutcome/5/valueOfChange
   body: json
-  auth: none
-}
-
-params:query {
-  : 
+  auth: bearer
 }
 
 headers {
@@ -19,9 +15,13 @@ headers {
   User-Agent: insomnia/11.1.0
 }
 
+auth:bearer {
+  token: {{user_token}}
+}
+
 body:json {
   
-  		{
+      {
     "totalOutcomeValue": 50000,
     "outcomeAdjustment": 50,
     "totalAdjustedValue": 25000,

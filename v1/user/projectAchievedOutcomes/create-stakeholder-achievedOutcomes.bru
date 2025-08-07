@@ -1,17 +1,13 @@
 meta {
-  name: create-stekholder-achievedOutcomes
+  name: create-stakeholder-achievedOutcomes
   type: http
   seq: 1
 }
 
 post {
-  url: {{ url }}/v1/user/achievedOutcome
+  url: {{url}}/v1/user/achievedOutcome
   body: json
-  auth: none
-}
-
-params:query {
-  : 
+  auth: bearer
 }
 
 headers {
@@ -19,33 +15,37 @@ headers {
   User-Agent: insomnia/11.1.0
 }
 
+auth:bearer {
+  token: {{user_token}}
+}
+
 body:json {
   [
     {
       "projectStakeholderId": 1,
-  		"outcomeOptionId":1,
+      "outcomeOptionId":1,
       "quantity": "Community",
       "activityPeriod": "during-project",
       "ourtcomeWeight": 1000,
       "dataCollectionMethos": "brainstorming",
       "startDate": "2025-01-15",
       "endDate": "2025-02-15",
-  		"subDimensionEn":"Human Capital",
-  		"achievedOutcomeEn":"No Change Occurred",
-  		"indicatorEn":"Number of healthcare visits improved / decreased"
+      "subDimensionEn":"Human Capital",
+      "achievedOutcomeEn":"No Change Occurred",
+      "indicatorEn":"Number of healthcare visits improved / decreased"
     },
      {
       "projectStakeholderId": 2,
-  		"outcomeOptionId":2,
+      "outcomeOptionId":2,
       "quantity": "Community",
       "activityPeriod": "during-project",
       "ourtcomeWeight": 20,
       "dataCollectionMethos": "brainstorming",
       "startDate": "2025-01-15",
       "endDate": "2025-02-15",
-  		"subDimensionEn":"Human Capital",
-  		"achievedOutcomeEn":"No Change Occurred",
-  		"indicatorEn":"Number of healthcare visits improved / decreased"
+      "subDimensionEn":"Human Capital",
+      "achievedOutcomeEn":"No Change Occurred",
+      "indicatorEn":"Number of healthcare visits improved / decreased"
     }
   ]
   

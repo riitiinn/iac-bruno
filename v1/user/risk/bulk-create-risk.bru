@@ -5,14 +5,18 @@ meta {
 }
 
 post {
-  url: {{ url }}/v1/user/project/12/risks
+  url: {{url}}/v1/user/project/1/risks
   body: json
-  auth: none
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
   User-Agent: insomnia/11.2.0
+}
+
+auth:bearer {
+  token: {{user_token}}
 }
 
 body:json {

@@ -5,9 +5,9 @@ meta {
 }
 
 post {
-  url: {{ url }}/v1/user/stakeholders/12
+  url: {{url}}/v1/user/stakeholders/1
   body: multipartForm
-  auth: none
+  auth: bearer
 }
 
 headers {
@@ -15,10 +15,14 @@ headers {
   User-Agent: insomnia/11.2.0
 }
 
+auth:bearer {
+  token: {{user_token}}
+}
+
 body:multipart-form {
   statusEn: in-progress
   targetNumber: 2
   result: abc
   percentage: 80
-  fileUrl: 
+  fileUrl: @file(/Users/ritin710/Downloads/close-up-of-intimidating-sanji-ngfolop4x9kw7xxt.jpg)
 }

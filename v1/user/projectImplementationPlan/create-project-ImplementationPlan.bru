@@ -5,18 +5,18 @@ meta {
 }
 
 post {
-  url: {{ url }}/v1/user/project/1/implementations
+  url: {{url}}/v1/user/project/1/implementations
   body: json
-  auth: none
-}
-
-params:query {
-  : 
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
   User-Agent: insomnia/11.1.0
+}
+
+auth:bearer {
+  token: {{user_token}}
 }
 
 body:json {

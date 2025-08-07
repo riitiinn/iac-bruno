@@ -5,13 +5,9 @@ meta {
 }
 
 post {
-  url: {{ url }}/v1/user/project
+  url: {{url}}/v1/user/project
   body: json
-  auth: none
-}
-
-params:query {
-  : 
+  auth: bearer
 }
 
 headers {
@@ -19,12 +15,16 @@ headers {
   User-Agent: insomnia/11.1.0
 }
 
+auth:bearer {
+  token: {{user_token}}
+}
+
 body:json {
   {
-  	"departmentId":1,
+    "departmentId":1,
     "name": "Kam ",
     "type": "others",
-  	"specify":"kamchors",
+    "specify":"kamchors",
     "establishYear": 2001,
     "startDate": "2025-05-29",
     "endDate": "2025-05-31"

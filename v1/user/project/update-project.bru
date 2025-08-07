@@ -5,18 +5,18 @@ meta {
 }
 
 patch {
-  url: {{ url }}/v1/user/project/3
+  url: {{url}}/v1/user/project/3
   body: json
-  auth: none
-}
-
-params:query {
-  : 
+  auth: bearer
 }
 
 headers {
   Content-Type: application/json
   User-Agent: insomnia/11.1.0
+}
+
+auth:bearer {
+  token: {{user_token}}
 }
 
 body:json {
@@ -28,7 +28,7 @@ body:json {
     "startDate": "2025-05-1",
     "endDate": "2026-01-31",
     "status": "planning",
-  	"description":"halka kam bhairacha",
+    "description":"halka kam bhairacha",
     "metadata": {
               "budget": "1000",
               "district": "Bagmati",
@@ -40,16 +40,16 @@ body:json {
               "googleMapLink": "https://www.comick.io",
               "relatedProjectSet": "Other",
               "organizationalPlan": "Action Plan",
-  		        "monitoringEndDate": "2026-05-31",
+              "monitoringEndDate": "2026-05-31",
               "monitoringInterval": "2",
               "monitoringIntervalUOM": "Month",
-  		        "sustainableDevelopmentGoals": [
+              "sustainableDevelopmentGoals": [
                   "Goal 3: Good Health and Well-being",
                   "Goal 6: Clean Water and Sanitation",
                   "Goal 13: Climate Action"
               ]
       
-  	}
+    }
   }
   
 }

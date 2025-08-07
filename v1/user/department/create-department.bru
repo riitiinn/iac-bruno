@@ -5,13 +5,9 @@ meta {
 }
 
 post {
-  url: {{ url }}/v1/user/department
+  url: {{url}}/v1/user/department
   body: json
-  auth: none
-}
-
-params:query {
-  : 
+  auth: bearer
 }
 
 headers {
@@ -19,9 +15,13 @@ headers {
   User-Agent: insomnia/11.1.0
 }
 
+auth:bearer {
+  token: {{user_token}}
+}
+
 body:json {
   {
-  	"name":"Department of beamlab",
-  	"organizationId":1
+    "name":"Department of beamlab",
+    "organizationId":1
   }
 }
