@@ -1,0 +1,20 @@
+meta {
+  name: request-plan-approval
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/v1/user/pm/project/1/request-plan
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{user_token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
