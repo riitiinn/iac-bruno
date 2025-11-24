@@ -1,0 +1,30 @@
+meta {
+  name: approve or reject  sub status
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{url}}/v1/user/im/project/1?status=rejected
+  body: json
+  auth: bearer
+}
+
+params:query {
+  status: rejected
+}
+
+auth:bearer {
+  token: {{user_token}}
+}
+
+body:json {
+  {
+   "reason":"not good"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

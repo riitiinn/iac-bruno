@@ -1,0 +1,26 @@
+meta {
+  name: update-project-sub-status
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{url}}/v1/user/pm/project/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{user_token}}
+}
+
+body:json {
+  {
+    "substatus":"Request to Record Performance Results"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
