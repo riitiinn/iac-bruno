@@ -5,13 +5,13 @@ meta {
 }
 
 patch {
-  url: {{url}}/v1/user/im/project/1?status=rejected
+  url: {{url}}/v1/user/im/project/2?status=approve
   body: json
   auth: bearer
 }
 
 params:query {
-  status: rejected
+  status: approve
 }
 
 auth:bearer {
@@ -20,7 +20,7 @@ auth:bearer {
 
 body:json {
   {
-   "reason":"not good"
+   "status":"request-performance-approval"
   }
 }
 
